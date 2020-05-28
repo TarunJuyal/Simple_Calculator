@@ -1,3 +1,5 @@
+addEventListener("load", calculate);
+
 function getHistory() {
   return document.querySelector("#resultHistory").innerText;
 }
@@ -11,9 +13,8 @@ function getResult() {
 function printResult(valueResult) {
   document.querySelector("#result").innerText = valueResult;
 }
-addEventListener("load", start);
 
-function start() {
+function calculate() {
   var operators = document.getElementsByClassName("operator");
   for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", function () {
@@ -33,8 +34,8 @@ function start() {
           history += output;
           if (this.id == "=") {
             let result = eval(history);
-            printResult(result);
-            printHistory("");
+            printResult("");
+            printHistory(result);
           } else {
             history += this.id;
             printHistory(history);
@@ -49,6 +50,7 @@ function start() {
   for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function () {
       var output = getResult();
+      var history = getHistory();
       if (output != NaN) {
         output += this.id;
         printResult(output);
