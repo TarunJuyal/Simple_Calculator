@@ -1,3 +1,3 @@
 # Simple_Calculator
 
-A basic calculator using JavaScript.
+A simple calculator using JavaScript.
