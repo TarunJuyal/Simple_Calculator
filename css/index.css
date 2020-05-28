@@ -1,14 +1,14 @@
 body {
-  background-color: coral;
+  background-color: lightblue;
 }
 
 .container {
   width: 575px;
   height: 80%;
-  background-color: blue;
+  background-color: black;
   margin: 5% auto;
   border-radius: 30px;
-  box-shadow: 7px 7px 10px 7px black;
+  box-shadow: 15px 15px 25px 7px black;
 }
 
 .outputContainer {
@@ -28,10 +28,10 @@ body {
   position: relative;
   right: 10px;
   font-size: 25px;
-} 
+}
 #resultContainer {
   overflow: hidden;
-  position: relative;
+  position: absolute;
   right: 10px;
   bottom: 0px;
   font-weight: bold;
@@ -54,7 +54,7 @@ button {
   font-weight: bold;
 }
 button.operator {
-  background-color: crimson;
+  background-color: lightgray;
 }
 button:active {
   transform: translateY(4px);
